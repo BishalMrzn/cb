@@ -5,6 +5,10 @@ function calling(src,callback) {
         console.log("Your script is"+src)
         callback()
     }
+    script.onerror=function(){
+      console.error("Yu are error")
+      // alert(error.Message)
+    }
     document.body.appendChild(script)
   }
   const hello=()=>{
@@ -14,5 +18,5 @@ function calling(src,callback) {
     alert("Goodmorning")
   }
   calling(
-    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",goodmorning
+    "https://cdn.jsdselivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",goodmorning
   );
